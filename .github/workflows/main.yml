@@ -12,6 +12,6 @@ jobs:
         uses: rovast/sync-upstream-repo@v0.0.1
         with: 
           upstream_repo: https://github.com/UnfiledOppositeQuackIssue/repo-automation-test
-          upstream_branch: main # change this
-          downstream_branch: main # change this
+          upstream_branch: release4.2 # change this
+          downstream_branch: release4.2 # change this
           token: ${{ secrets.AUTOMATION_TOKEN }}
