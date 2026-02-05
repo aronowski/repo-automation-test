@@ -8,8 +8,10 @@ jobs:
   update-fork:
     runs-on: ubuntu-latest
     steps:
-      - uses: Shurtu-gal/autoupdate-fork-action@v1.0.0
-        with:
-          github_token: ${{ secrets.AUTOMATION_TOKEN }}
-          pr_filter: all
-          base_branches: 'main, release4.2'
+      - name: GitHub Sync to Upstream Repository
+        uses: rovast/sync-upstream-repo@v0.0.1
+        with: 
+          upstream_repo: https://github.com/UnfiledOppositeQuackIssue/repo-automation-test
+          upstream_branch: main # change this
+          downstream_branch: main # change this
+          token: ${{ secrets.AUTOMATION_TOKEN }}
